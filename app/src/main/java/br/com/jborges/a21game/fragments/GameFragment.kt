@@ -1,5 +1,6 @@
 package br.com.jborges.a21game.fragments
 
+//jborges
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import br.com.jborges.a21game.EstorouPontuacaoActivity
 
 import br.com.jborges.a21game.R
 import br.com.jborges.a21game.dao.CartaDAO
@@ -17,10 +19,6 @@ import br.com.jborges.a21game.model.Carta
 import kotlinx.android.synthetic.main.fragment_game.*
 import java.util.*
 
-
-/**
- * A simple [Fragment] subclass.
- */
 class GameFragment : Fragment() {
 
     val cartaDAO = CartaDAO()
@@ -65,7 +63,7 @@ class GameFragment : Fragment() {
         val posicaoCartaSelecionada = gerador.nextInt(cartas.size)
         val cartaSelecionada = cartas.get(posicaoCartaSelecionada)
 
-        val pontuacaoAtualizada = tvPontuacao.text.toString().toInt() + cartaSelecionada.pontuacao
+        val pontuacaoAtualizada = tvPontuacao.text.toString().toInt() + cartaSelecionada.pontucao
         tvPontuacao.text = pontuacaoAtualizada.toString()
         if (pontuacaoAtualizada > 21) {
             val intent = Intent(context, EstorouPontuacaoActivity::class.java)
