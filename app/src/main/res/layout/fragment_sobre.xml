@@ -5,9 +5,11 @@
     tools:context="br.com.jborges.a21game.fragments.SobreFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/ivLogo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:src="@drawable/giulia"/>
+
 
 </FrameLayout>

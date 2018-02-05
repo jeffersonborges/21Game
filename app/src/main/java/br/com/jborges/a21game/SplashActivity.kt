@@ -10,11 +10,15 @@ import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
 
+    //Tempo que o nosso splashscrenn ficará visível
+    private val SPLASH_DISPLAY_LENGTH = 3500L
+
     lateinit var ivLogo: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
         ivLogo = findViewById(R.id.ivLogo)
 
         carregar()
