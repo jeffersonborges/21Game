@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.jborges.a21game.fragments.GameFragment">
+    tools:context="br.com.jborges.a21game.fragments.GameFragment"
+    tools:layout_editor_absoluteY="81dp">
 
 
     <TextView
@@ -20,11 +21,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="7dp"
         android:layout_marginTop="8dp"
         android:text="Sua pontuação"
-        app:layout_constraintBottom_toTopOf="@+id/btProximaCarta"
         app:layout_constraintEnd_toStartOf="@+id/tvPontuacao"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,24 +31,22 @@
         android:id="@+id/btProximaCarta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="55dp"
         android:text="Próxima carta"
-        app:layout_constraintBottom_toTopOf="@+id/btRecomecar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btRecomecar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:text="recomeçar o jogo"
-        app:layout_constraintBottom_toTopOf="@+id/ivCarta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btProximaCarta" />
@@ -57,11 +54,14 @@
     <ImageView
         android:id="@+id/ivCarta"
         android:layout_width="232dp"
-        android:layout_height="0dp"
+        android:layout_height="278dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/as_de_espada"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btRecomecar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btRecomecar"
         app:layout_constraintTop_toBottomOf="@+id/btRecomecar" />
 
 </android.support.constraint.ConstraintLayout>
